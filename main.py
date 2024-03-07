@@ -97,10 +97,12 @@ def main():
 
 while programRunning:
   answer = input("Would you like to generate a password? ")
-  if answer.lower() == "yes" or answer.lower() == "y" and :
+  if answer.lower() == "yes" or answer.lower() == 'y' :
     main()
-  else:
+  if answer.lower() == "no" or answer.lower() == 'n':
     programRunning = False
+  else:
+    print("Write y/yes to generate a password or n/no to exit the program.")
 
 ###########################################################################
 # End of the program
