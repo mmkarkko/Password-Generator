@@ -16,7 +16,8 @@ import secrets
 # Possible characters of the password
 
 #Characters that are allowed in the password
-letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ"
+letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+scands  = "ÅÄÖ"
 numbers = "0123456789"
 symbols = "!\"#%&/(){}[]=?^*+-_.:,;<>§@£$€"
 
@@ -27,12 +28,14 @@ maxLength = 30
 userInput = ""  # User input variable
 password = ""  # Password variable
 
+scandsOrNot    = False  # Variable to check if the password should contain scands
+programRunning = True
+
 ###########################################################################
 # Variables that are involved with testing
 
 isCorrect = "Correct, it contains only numbers"
 notCorrect = "Incorrect, it contains characters other than numbers"
-
 
 ###########################################################################
 # Checks the given input
@@ -65,13 +68,14 @@ def checkUserInput(minLength, maxLength):
 # symbs  = the available symbols for the password
 
 def createPassword(length, letrs, nums, symbs):
-  lowercase = letrs.lower() # Lowercase letters
-  availableChars = letrs + lowercase + nums + symbs # All available characters
+  lowercase = letrs.lower()  # Lowercase letters
+  availableChars = letrs + lowercase + nums + symbs  # All available characters
 
   # Generates a random password
   password = ''.join(secrets.choice(availableChars) for i in range(length))
-  
+
   return password
+
 
 ###########################################################################
 # Welcome to the program!!
@@ -80,10 +84,23 @@ print("Welcome to the password generator!", "", "", sep="\n")
 
 # Calls for a function that asks for an input
 # Sends in the parameters that are needed for the function
-userInput = checkUserInput(minLength, maxLength)
-password = createPassword(userInput, letters, numbers, symbols)
+# After creating a password, asks if user wants to create another one
+#while programRunning:
 
-print("Here is the generated password:", password)
+def main():
+  userInput = checkUserInput(minLength, maxLength)
+  password = createPassword(userInput, letters, numbers, symbols)
+  print("Here is the generated password:", password)
 
 ###########################################################################
-# eof
+## Asks the user if the user wants to generate a password
+
+while programRunning:
+  answer = input("Would you like to generate a password? ")
+  if answer.lower() == "yes" or answer.lower() == "y" and :
+    main()
+  else:
+    programRunning = False
+
+###########################################################################
+# End of the program
