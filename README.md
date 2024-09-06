@@ -1,35 +1,31 @@
-This is a readme-file of Password generator application.
+Password Generator
 
-# Password generator
+A program that generates a random password based on user input.
 
-This is a simple program, that generates a password based on user's input.
+Tools and Technologies Used:
 
-## Installation
+    - Programming Language: Python 3
+    - Development Environment: Any Python IDE (e.g., Visual Studio Code, PyCharm)
 
-################
+Project Structure:
 
-## Usage
+    - main.py: The main script that initiates the password generation process and manages user input.
+    - README.md: This file, which provides an overview of the project.
 
-Program asks user how long password should be. 
-The minimum length for a password is 10 characters and maximum length is 30 characters. The password generator will generate a password, that is between that length based on the user preferences and contains both uppercase and lowercase letters, numbers and symbols.
+Features:
 
-## Features
+    - Generates passwords of user-defined length between 8 and 30 characters.
+    - Optionally includes Scandinavian letters (Å, Ä, Ö).
+    - Customizable with a variety of characters, including uppercase letters, lowercase letters, numbers, and symbols.
 
-################
+Objectives:
+Through this project, I aim to strengthen the following programming skills:
 
-## Background
+    - Using basic Python constructs: variables, loops, conditional statements.
+    - Utilizing functions and modules.
+    - Basics of user input handling.
+    - Generating random data and manipulating strings.
 
-The purpose of this project is to familiarize to Python language and it's uses.
+Notes:
 
-## License
-
-This program is free to be used.
-
-## Contact
-
-https://replit.com/@mmkarkko/Password-generator
-[@mmkarkko](https://github.com/mmkarkko)
-
-## Changelog
-
-First version 1.0 was deployed March the 7th 2024.
+    - This project is a personal learning tool and is not intended to be shared or used by others.
